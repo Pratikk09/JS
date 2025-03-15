@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body style="background-color: black;color:white;" >
+  <ul class="language">
+    <li>javascript</li>
+  </ul>
+</body>
+<script>
+  function addlanguage(languageN) {
+    const li = document.createElement('li')
+    li.innerHTML = `${languageN}`
+    document.querySelector('.language').appendChild(li) 
+  }
+  addlanguage("pyhton")
+
+  function addlanguage1(languageN) {
+    const li = document.createElement('li')
+    li.appendChild(document.createTextNode(languageN))
+    document.querySelector('.language').appendChild(li) 
+    
+  }
+  addlanguage1("c++")
+  // Edit
+  const secondlan = document.querySelector("li:nth-child(2)")
+  const newli = document.createElement('li')
+  newli.textContent = "pra"
+   secondlan.replaceWith(newli)
+  // secondlan.innerHTML ="PRATIK"
+
+  // edit
+  const first = document.querySelector("li:first-child")
+first.outerHTML= '<li>Typescript</li>'
+
+//remove
+const last = document.querySelector("li:last-child")
+last.remove()
+  
+</script>
+</html>
