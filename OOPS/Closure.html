@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+  <body style="background-color: black;" >
+  <button id = "Orange">Orange</button>
+  <button id = "green">Green</button>
+
+  <script>
+    //Lexcial scoping_______________
+    // function one(){
+    //   let name = "mehta"
+    //   function two(){
+    //     console.log(name);
+        
+    //   }
+    //   two();
+    // }
+    // one();
+
+
+    // function fun(){
+    //   const name = "pratik"
+    //   function disname(){
+    //     console.log(name);
+        
+    //   }
+    //   return disname;
+    // }
+    // const myfun = fun();
+    // myfun();
+  </script>
+
+  <script>
+  //  document.getElementById("Orange").onclick = function()
+  //  {
+  //   document.body.style.backgroundColor = "Orange"
+  //  }
+  //  document.getElementById("green").onclick = function()
+  //  {
+  //   document.body.style.backgroundColor = "green"
+  //  }
+
+    function click(color){
+      return function(){
+         document.body.style.backgroundColor = `${color}`
+      }
+    }
+    document.getElementById("green").onclick = click("green")
+    document.getElementById("Orange").onclick = click("Orange")
+    
+  </script>
+</body>
+</html>
